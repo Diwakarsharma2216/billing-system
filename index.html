@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Billing System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-5">
+    <div class="max-w-5xl mx-auto bg-white shadow-md rounded-lg p-5">
+        <h1 class="text-center text-3xl font-mono bg-cyan-600 text-white py-2 mb-5 rounded">Billing System</h1>
+        
+        <div class="customer-details grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+            <div>
+                <label class="block text-gray-700">Customer Name:</label>
+                <input type="text" id="customerName" class="w-full border rounded p-2">
+            </div>
+            <div>
+                <label class="block text-gray-700">Contact No.:</label>
+                <input type="text" id="contactNo" class="w-full border rounded p-2">
+            </div>
+            <div>
+                <label class="block text-gray-700">Bill No.:</label>
+                <input type="text" id="billNo" value="7553" class="w-full border rounded p-2" readonly>
+            </div>
+        </div>
+        
+        <div class="products grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+            <div class="snacks bg-purple-100 p-4 rounded-lg shadow-inner">
+                <h2 class="text-xl font-semibold mb-3">Snacks</h2>
+                <label class="block">Nutella Choco Spread:</label>
+                <input type="number" id="snack1" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Noodles(1 Pack):</label>
+                <input type="number" id="snack2" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Lays(10Rs):</label>
+                <input type="number" id="snack3" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Oreo(20Rs):</label>
+                <input type="number" id="snack4" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Chocolate Muffin:</label>
+                <input type="number" id="snack5" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Dairy Milk Silk(60Rs):</label>
+                <input type="number" id="snack6" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Namkeens(1 Str):</label>
+                <input type="number" id="snack7" value="0" class="w-full border rounded mb-2 p-1">
+            </div>
+            <div class="grocery bg-green-100 p-4 rounded-lg shadow-inner">
+                <h2 class="text-xl font-semibold mb-3">Grocery</h2>
+                <label class="block">Aashirvaad Atta(1kg):</label>
+                <input type="number" id="grocery1" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Pasta(1kg):</label>
+                <input type="number" id="grocery2" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Basmati Rice(1kg):</label>
+                <input type="number" id="grocery3" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Sunflower Oil(1ltr):</label>
+                <input type="number" id="grocery4" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Refined Sugar(1kg):</label>
+                <input type="number" id="grocery5" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Daal(1kg):</label>
+                <input type="number" id="grocery6" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Tea Powder(1kg):</label>
+                <input type="number" id="grocery7" value="0" class="w-full border rounded mb-2 p-1">
+            </div>
+            <div class="beauty-hygiene bg-pink-100 p-4 rounded-lg shadow-inner">
+                <h2 class="text-xl font-semibold mb-3">Beauty & Hygiene</h2>
+                <label class="block">Bathing Soap:</label>
+                <input type="number" id="beauty1" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Shampoo(1ltr):</label>
+                <input type="number" id="beauty2" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Body Lotion(1ltr):</label>
+                <input type="number" id="beauty3" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Face Cream:</label>
+                <input type="number" id="beauty4" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Shaving Foam:</label>
+                <input type="number" id="beauty5" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Face Mask(spice):</label>
+                <input type="number" id="beauty6" value="0" class="w-full border rounded mb-2 p-1">
+                <label class="block">Hand Sanitizer(50ml):</label>
+                <input type="number" id="beauty7" value="0" class="w-full border rounded mb-2 p-1">
+            </div>
+        </div>
+        
+        <div class="billing-summary bg-gray-200 p-4 rounded-lg shadow-inner mb-5">
+            <h2 class="text-xl font-semibold mb-3">Billing Summary</h2>
+            <label>Total Snacks Price:</label>
+            <input type="text" id="totalSnacksPrice" class="w-full border rounded mb-2 p-1" readonly>
+            <label>Snacks Tax:</label>
+            <input type="text" id="snacksTax" class="w-full border rounded mb-2 p-1" readonly>
+            <label>Total Grocery Price:</label>
+            <input type="text" id="totalGroceryPrice" class="w-full border rounded mb-2 p-1" readonly>
+            <label>Grocery Tax:</label>
+            <input type="text" id="groceryTax" class="w-full border rounded mb-2 p-1" readonly>
+            <label>Total Beauty & Hygiene Price:</label>
+            <input type="text" id="totalBeautyPrice" class="w-full border rounded mb-2 p-1" readonly>
+            <label>Beauty & Hygiene Tax:</label>
+            <input type="text" id="beautyTax" class="w-full border rounded mb-2 p-1" readonly>
+        </div>
+        
+        <div class="buttons flex justify-between mb-5">
+            <button onclick="calculateTotalBill()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Total Bill</button>
+            <button onclick="clearFields()" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-700">Clear Fields</button>
+            <button onclick="exit()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700">Exit</button>
+        </div>
+        
+        <div class="bill-area bg-white p-4 rounded-lg shadow-inner">
+            <h2 class="text-xl font-semibold mb-3">Bill Area</h2>
+            <p id="billArea" class="whitespace-pre-line">
+                WELCOME TO SUPER MARKET<br>
+                Phone-No.732875410<br>
+                Bill No.: 7553<br>
+                Customer Name: <span id="displayCustomerName"></span><br>
+                Phone No.: <span id="displayPhoneNo"></span><br>
+                <hr>
+                <span id="billDetails"></span>
+            </p>
+        </div>
+    </div>
+   
+        
+    </body>
+<script src="index.js"></script>
+</html>
